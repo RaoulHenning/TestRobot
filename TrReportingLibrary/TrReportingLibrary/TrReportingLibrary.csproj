@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\TrSeperators.cs" />
     <Compile Include="Generic\TrGenericUtils.cs" />
     <Compile Include="ReportListeners\TrPlainTextListener\TrPlainTextWriter.cs" />
     <Compile Include="ReportListeners\TrXmlListener\ScriptFlowMessage.cs" />

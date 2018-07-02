@@ -43,6 +43,11 @@
     <Compile Include="Constants\TrSeperators.cs" />
     <Compile Include="Generic\TrGenericUtils.cs" />
     <Compile Include="ReportListeners\TrPlainTextListener\TrPlainTextWriter.cs" />
+    <Compile Include="ReportListeners\TrXmlListener\ScriptFlowMessage.cs" />
+    <Compile Include="ReportListeners\TrXmlListener\ScriptMessageBase.cs" />
+    <Compile Include="ReportListeners\TrXmlListener\ScriptOutputMessage.cs" />
+    <Compile Include="ReportListeners\TrXmlListener\TrXmlEntry.cs" />
+    <Compile Include="ReportListeners\TrXmlListener\TrXmlWriter.cs" />
     <Compile Include="ReportProviders\Unsubscriber.cs" />
     <Compile Include="TrDataTypes\TrReportLine.cs" />
     <Compile Include="ReportProviders\TrReportProvider.cs" />
@@ -52,7 +57,6 @@
   <ItemGroup>
     <Folder Include="ReportListeners\TrCsvListener\" />
     <Folder Include="ReportListeners\TrRtfListener\" />
-    <Folder Include="ReportListeners\TrXmlListener\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

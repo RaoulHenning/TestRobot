@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generic\TrGenericUtils.cs" />
     <Compile Include="ReportListeners\TrPlainTextListener\TrPlainTextWriter.cs" />
     <Compile Include="ReportListeners\TrXmlListener\ScriptFlowMessage.cs" />
     <Compile Include="ReportListeners\TrXmlListener\ScriptMessageBase.cs" />
@@ -47,10 +48,10 @@
     <Compile Include="ReportListeners\TrXmlListener\TrXmlEntry.cs" />
     <Compile Include="ReportListeners\TrXmlListener\TrXmlWriter.cs" />
     <Compile Include="ReportProviders\Unsubscriber.cs" />
-    <Compile Include="TrReportLine.cs" />
+    <Compile Include="TrDataTypes\TrReportLine.cs" />
     <Compile Include="ReportProviders\TrReportProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrReportStatus.cs" />
+    <Compile Include="TrEnums\TrReportStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ReportListeners\TrCsvListener\" />

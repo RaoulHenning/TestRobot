@@ -39,5 +39,33 @@ namespace TrReportingLibrary.ReportListeners.TrPlainTextListener
             _cancellation.Dispose();
             // Handel hier je memory af
         }
+
+
+        private void WriteLineToTextReport(string line, bool isSeToolLine)
+        {
+            
+        }
+
+        private static void MakeLineDescent(ref string line, out char reportTag, bool isSeToolLine)
+        {
+
+            line = line.Trim();
+            if (line.Length <= 0)
+            {
+                reportTag = char.MinValue;
+            }
+            // If it is an SETool line, swap the timestamp and pass/fail indicator
+            if (isSeToolLine && line.Length >= 10)
+            {
+                // Only lines like "19:20:13 P" should be changed
+                // There are also lines like "19:20:13 Line could not be parsed". For this a R must be added
+                if()
+            }
+        }
+
+        private static bool IsValidLineType(char lineType)
+        {
+            
+        }
     }
 }

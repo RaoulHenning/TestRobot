@@ -51,7 +51,9 @@
     <Compile Include="TrDataTypes\TrReportLine.cs" />
     <Compile Include="ReportProviders\TrReportProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrEnums\TrFlowMessageType.cs" />
     <Compile Include="TrEnums\TrReportStatus.cs" />
+    <Compile Include="TrEnums\TrTestReportItemState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ReportListeners\TrCsvListener\" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrReportingLibrary.TrEnums;
 
 namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
 {
@@ -9,8 +10,8 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
     /// </summary>
     public class ScriptFlowMessage : ScriptMessageBase
     {
-        private FlowMessageType m_MarkerType;
-        private TestItemType m_TestItemType;
+        private TrFlowMessageType m_MarkerType;
+        private TrTestItemType m_TestItemType;
 
         #region Constructor
 
@@ -23,13 +24,13 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
         /// <param name="testItemType">The type of the item (Loop, Test batch etc.)</param>
         /// <param name="identifier">The name of the item</param>
         /// <param name="enabled">True if the item is executed;False otherwise</param>
-        public ScriptFlowMessage(int lineNr, String timeStamp, FlowMessageType markerType, TestItemType testItemType, String identifier, Boolean enabled)
+        public ScriptFlowMessage(int lineNr, String timeStamp, TrFlowMessageType markerType, TrTestItemType testItemType, String identifier, Boolean enabled)
             : base(lineNr, timeStamp, testItemType.ToString(), identifier, enabled)
         {
             m_MarkerType = markerType;
             m_TestItemType = testItemType;
 
-            if ((m_TestItemType == TestItemType.TestBatch) || (m_TestItemType == TestItemType.NormalTestCase))
+            if ((m_TestItemType == TrTestItemType.TestBatch) || (m_TestItemType == TrTestItemType.NormalTestCase))
             {
                 // The identifier of these types have an extension (.xml or .xls). Remove those
 
@@ -37,7 +38,7 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
                 m_Value = m_Value.Replace(".xls", "");
             }
 
-            if (m_TestItemType == TestItemType.NormalTestCase)
+            if (m_TestItemType == TrTestItemType.NormalTestCase)
             {
                 // The test case identifiers also contain the type of test case. Move this to the type field i.s.o. the value field
                 if (m_Value.Contains("("))
@@ -55,7 +56,7 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
         /// <summary>
         /// Marks if the item was started, ended or aborted
         /// </summary>
-        public FlowMessageType MessageType
+        public TrFlowMessageType MessageType
         {
             get
             {
@@ -66,7 +67,7 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
         /// <summary>
         /// The type of the item (Loop, Test batch etc.)
         /// </summary>
-        public TestItemType TestItemType
+        public TrTestItemType TestItemType
         {
             get
             {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrReportingLibrary.TrEnums;
 
 namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
 {
@@ -9,7 +10,7 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
     /// </summary>
     public class ScriptOutputMessage : ScriptMessageBase
     {
-        private LineType m_LineType;
+        private TrLineType m_LineType;
 
         #region Constructor
 
@@ -21,7 +22,7 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
         /// <param name="lineType"></param>
         /// <param name="identifier"></param>
         /// <param name="enabled"></param>
-        public ScriptOutputMessage(int lineNr, String timeStamp, LineType lineType, String identifier, Boolean enabled)
+        public ScriptOutputMessage(int lineNr, String timeStamp, TrLineType lineType, String identifier, Boolean enabled)
             : base(lineNr, timeStamp, lineType.ToString(), identifier, enabled)
         {
             m_LineType = lineType;
@@ -34,7 +35,7 @@ namespace Philips.Healthcare.IXR.ATT.TAF.Reporting
         /// <summary>
         /// The type of this line
         /// </summary>
-        public LineType LineType
+        public TrLineType LineType
         {
             get
             {

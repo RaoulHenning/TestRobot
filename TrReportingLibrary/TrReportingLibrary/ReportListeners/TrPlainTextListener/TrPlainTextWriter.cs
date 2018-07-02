@@ -55,10 +55,17 @@ namespace TrReportingLibrary.ReportListeners.TrPlainTextListener
                 reportTag = char.MinValue;
             }
             // If it is an SETool line, swap the timestamp and pass/fail indicator
-            if (isSeToolLine && line.Length >= 0)
+            if (isSeToolLine && line.Length >= 10)
             {
-                
+                // Only lines like "19:20:13 P" should be changed
+                // There are also lines like "19:20:13 Line could not be parsed". For this a R must be added
+                if()
             }
+        }
+
+        private static bool IsValidLineType(char lineType)
+        {
+            
         }
     }
 }
